@@ -1,0 +1,20 @@
+.navLink {
+  font-size: 1.2em;
+  color: #c1c1c1;
+  padding: 4px 10px;
+  border: dashed 0.5px #c1c1c1;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.navLink:hover {
+  color: var(--btn-color-2);
+  border: solid 0.5px var(--btn-color-1);
+  background-color: var(--btn-color-1);
+}

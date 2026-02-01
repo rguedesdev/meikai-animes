@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #000000;
+  --btn-color-1: #cd6b0b;
+  --btn-color-2: #783907;
+}
+
+body {
+  background-color: var(--background-color);
+}
