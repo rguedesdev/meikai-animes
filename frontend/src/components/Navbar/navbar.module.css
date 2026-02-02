@@ -1,8 +1,24 @@
-.navLink {
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 70px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+/* ===== Base comum ===== */
+.navLink,
+.navLinkActive {
   font-size: 1.2em;
-  color: #c1c1c1;
-  padding: 4px 10px;
-  border: dashed 0.5px #c1c1c1;
+  padding: 4px 20px;
   border-radius: 4px;
 
   display: flex;
@@ -11,10 +27,29 @@
   gap: 5px;
 
   cursor: pointer;
+  box-sizing: border-box;
 }
 
+/* ===== Estado normal ===== */
+.navLink {
+  color: #c1c1c1;
+  border: dashed 0.5px #c1c1c1;
+
+  transition: all 0.15s ease-in;
+}
+
+/* ===== Hover (apenas no normal) ===== */
 .navLink:hover {
   color: var(--btn-color-2);
   border: solid 0.5px var(--btn-color-1);
   background-color: var(--btn-color-1);
+}
+
+/* ===== Estado ativo ===== */
+.navLinkActive {
+  color: var(--btn-color-2);
+  background-color: var(--btn-color-1);
+
+  /* mantém o tamanho mesmo sem borda visível */
+  border: solid 0.5px transparent;
 }

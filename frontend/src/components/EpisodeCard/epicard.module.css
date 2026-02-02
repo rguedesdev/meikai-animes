@@ -1,0 +1,54 @@
+.epiCard {
+  width: 300px;
+  height: 180px;
+
+  position: relative; /* 🔥 referência do fill */
+  border-radius: 8px;
+  overflow: hidden;
+
+  border: 1px solid #c1c1c1;
+
+  cursor: pointer;
+
+  transition: all 0.15s ease-in;
+}
+
+.epiCard:hover {
+  outline: 3px solid #ffffff;
+  transform: scale(1.1);
+}
+
+.epiCard:active {
+  transform: scale(1);
+}
+
+/* imagem ocupa TODO o card */
+.epiBg {
+  object-fit: cover;
+}
+
+/* texto sobreposto */
+.epiOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.epiTitle {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-weight: bold;
+}
