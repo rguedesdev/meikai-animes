@@ -4,51 +4,15 @@
 
 .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1280px;
   margin-inline: auto;
 }
 
-.animesAiring {
-  display: flex;
-  flex-direction: column;
-}
-
-.animesAiringTitleContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.animesAiringTitle {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-.btnSeeAll {
-  padding: 5px 20px;
-  border: 1px solid #c1c1c1;
-  border-radius: 7px;
-
-  cursor: pointer;
-  transition: all 0.15s ease-in;
-}
-
-.btnSeeAll:hover {
-  background-color: #c1c1c1;
-}
-
-.btnSeeAll:active {
-  transform: scale(0.97);
-}
-
-.animesAiringHr {
-  /* display: block; */
-  border: none;
-  height: 1px;
-  width: 100%;
-
-  background: linear-gradient(to right, transparent, #c1c1c1, transparent);
-  margin-top: 20px;
-  margin-bottom: 30px;
+.alert {
+  text-align: center;
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: 1px dashed #c1c1c1;
+  border-radius: 8px;
+  margin-bottom: 50px;
 }

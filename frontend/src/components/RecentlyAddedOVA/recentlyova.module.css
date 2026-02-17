@@ -1,11 +1,11 @@
-.animesAiring {
+.recentlyAddedOVA {
   display: flex;
   flex-direction: column;
 
   margin-bottom: 50px;
 }
 
-.animesAiringTitleContainer {
+.recentlyAddedOVATitleContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 }
 
-.animesAiringTitle {
+.recentlyAddedOVATitle {
   font-size: 1.1em;
   font-weight: bold;
 }
@@ -36,24 +36,22 @@
   transform: scale(0.97);
 }
 
-.animesAiringHr {
+.recentlyAddedOVAHr {
   border: none;
   height: 1px;
   width: 100%;
-
   background: linear-gradient(to right, transparent, #c1c1c1, transparent);
 
   margin-bottom: 30px;
 }
 
-.epiCard {
-  width: 295px;
-  height: 166px;
-  /* border: 1px solid #c1c1c1; */
-
-  position: relative;
+.recentlyAddedOVACard {
+  width: 230px;
+  height: 350px;
   border-radius: 8px;
   overflow: hidden;
+
+  position: relative;
 
   margin-bottom: 15px;
   cursor: pointer;
@@ -61,22 +59,17 @@
   transition: all 0.15s ease-in;
 }
 
-.epiCard:hover {
+.recentlyAddedOVACard:hover {
   outline: 3px solid #ffffff;
   transform: scale(1.1);
 }
 
-.epiCard:active {
-  transform: scale(1);
-}
-
 /* imagem ocupa TODO o card */
-.epiBg {
+.recentlyAddedOVAPicture {
   object-fit: cover;
 }
 
-/* texto sobreposto */
-.epiOverlay {
+.OVAOverlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -86,14 +79,10 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 
   color: var(--text-color);
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
-.epiTitle {
-  width: 200px;
+.OVATitle {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

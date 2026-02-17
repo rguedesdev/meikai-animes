@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 // Components Principais
 import { Navbar } from "@/components/Navbar/page";
+import { Footer } from "@/components/Footer/page";
 
 function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -31,6 +32,7 @@ function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

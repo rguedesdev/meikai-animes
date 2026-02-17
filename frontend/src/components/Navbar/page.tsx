@@ -69,7 +69,7 @@ function Navbar() {
               }
               href={`/faq`}
             >
-              <FaQuestion size={17} />
+              <FaQuestion size={15} />
               <span>F.A.Q.</span>
             </Link>
           </li>

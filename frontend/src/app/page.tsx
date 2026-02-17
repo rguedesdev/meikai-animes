@@ -6,50 +6,41 @@ import styles from "./home.module.css";
 
 // Componetes
 import { EpisodeCard } from "@/components/EpisodeCard/page";
+import { RecentlyAddedAnime } from "@/components/RecentlyAddedAnime/page";
+import { RecentlyAddedOVA } from "@/components/RecentlyAddedOVA/page";
+import { RecentlyAddedMovies } from "@/components/RecentlyAddedMovies/page";
+import { MeikaiPass } from "@/components/MeikaiPass/page";
+import { FeaturedAnime } from "@/components/FeaturedAnime/page";
 
 function Home() {
   return (
     <div className={styles.page}>
-      <div className={styles.container}>
-        {/* Seção principal / destaque */}
-        {/* <section>
-          <h1>Meikai Animes</h1>
-          <p>Animes em exibição e lançamentos recentes</p>
-        </section> */}
+      <main className={styles.container}>
+        {/* Alert Informativo */}
+        <div role="status" className={styles.alert}>
+          Ainda estamos fazendo algumas alterações no site e podem ocorrer
+          alguns bugs durante a navegação. Prometo que não é nada que atrapalhe
+          na usabilidade ❤
+        </div>
 
         {/* Animes em exibição */}
-        <section className={styles.animesAiring}>
-          <div className={styles.animesAiringTitleContainer}>
-            <h2 className={styles.animesAiringTitle}>ANIMES EM EXIBIÇÃO</h2>
-            <button className={styles.btnSeeAll}>Ver Todos</button>
-          </div>
+        <EpisodeCard />
 
-          <hr className={styles.animesAiringHr} />
-          <div className="grid grid-cols-4 gap-4">
-            <EpisodeCard />
-            <EpisodeCard />
-            <EpisodeCard />
-            <EpisodeCard />
-          </div>
-        </section>
+        {/* Últimos Animes Adicionados */}
+        <RecentlyAddedAnime />
 
-        {/* Lançamentos / Carrossel */}
-        {/* <section>
-          <h2>Lançamentos</h2>
+        {/* Últimos OVAs Adicionados */}
+        <RecentlyAddedOVA />
 
-          <div className="carousel">
-            <article>
-              <h3>Jujutsu Kaisen</h3>
-              <Image src="#" alt="Jujutsu Kaisen" />
-            </article>
+        {/* Últimos Filmes Adicionados */}
+        <RecentlyAddedMovies />
 
-            <article>
-              <h3>Chainsaw Man</h3>
-              <Image src="/chainsaw.jpg" alt="Chainsaw Man" />
-            </article>
-          </div>
-        </section> */}
-      </div>
+        {/* Anime em Destaque */}
+        <FeaturedAnime />
+
+        {/* Serviço Premium - Meikai Pass */}
+        <MeikaiPass />
+      </main>
     </div>
   );
 }
