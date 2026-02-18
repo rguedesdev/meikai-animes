@@ -17,9 +17,11 @@
 .recentlyAddedAnimeTitle {
   font-size: 1.1em;
   font-weight: bold;
+  color: var(--text-color);
 }
 
 .btnSeeAll {
+  color: var(--text-color);
   padding: 5px 20px;
   border: 1px solid #c1c1c1;
   border-radius: 7px;
@@ -30,6 +32,7 @@
 
 .btnSeeAll:hover {
   background-color: #c1c1c1;
+  color: var(--text-color-after);
 }
 
 .btnSeeAll:active {
@@ -45,9 +48,16 @@
   margin-bottom: 30px;
 }
 
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
 .recentlyAddedAnimeCard {
-  width: 230px;
-  height: 350px;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+
   border-radius: 8px;
   overflow: hidden;
 
@@ -61,7 +71,7 @@
 
 .recentlyAddedAnimeCard:hover {
   outline: 3px solid #ffffff;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 /* imagem ocupa TODO o card */
@@ -88,4 +98,24 @@
   text-overflow: ellipsis;
 
   font-weight: bold;
+}
+
+/* / Configurações de Responsividade / */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

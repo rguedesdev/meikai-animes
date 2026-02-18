@@ -17,12 +17,14 @@
 .animesAiringTitle {
   font-size: 1.1em;
   font-weight: bold;
+  color: var(--text-color);
 }
 
 .btnSeeAll {
-  padding: 5px 20px;
+  color: var(--text-color);
   border: 1px solid #c1c1c1;
   border-radius: 7px;
+  padding: 5px 20px;
 
   cursor: pointer;
   transition: all 0.15s ease-in;
@@ -30,6 +32,7 @@
 
 .btnSeeAll:hover {
   background-color: #c1c1c1;
+  color: var(--text-color-after);
 }
 
 .btnSeeAll:active {
@@ -46,24 +49,30 @@
   margin-bottom: 30px;
 }
 
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
 .epiCard {
-  width: 295px;
-  height: 166px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
   /* border: 1px solid #c1c1c1; */
 
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 
-  margin-bottom: 15px;
   cursor: pointer;
-
   transition: all 0.15s ease-in;
+  margin-bottom: 15px;
 }
 
 .epiCard:hover {
   outline: 3px solid #ffffff;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .epiCard:active {
@@ -93,10 +102,27 @@
 }
 
 .epiTitle {
-  width: 200px;
+  flex: 1;
+  min-width: 0;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
   font-weight: bold;
+}
+
+/* / Configurações de Responsividade / */
+/* Tablet */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
 }

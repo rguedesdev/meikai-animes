@@ -17,9 +17,11 @@
 .recentlyAddedMoviesTitle {
   font-size: 1.1em;
   font-weight: bold;
+  color: var(--text-color);
 }
 
 .btnSeeAll {
+  color: var(--text-color);
   padding: 5px 20px;
   border: 1px solid #c1c1c1;
   border-radius: 7px;
@@ -30,6 +32,7 @@
 
 .btnSeeAll:hover {
   background-color: #c1c1c1;
+  color: var(--text-color-after);
 }
 
 .btnSeeAll:active {

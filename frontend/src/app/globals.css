@@ -9,6 +9,7 @@
 :root {
   --background-color: #000000;
   --text-color: #ffffff;
+  --text-color-after: #212121;
   --primary-color: #cd6b0b;
   --secondary-color: #783907;
   --btn-color-1: #cd6b0b;

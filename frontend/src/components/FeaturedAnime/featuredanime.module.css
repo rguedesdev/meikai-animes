@@ -5,16 +5,15 @@
 }
 
 .featuredAnimeContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
   align-items: center;
 }
 
 /* Coluna Imagem */
 .wallpaperWrapper {
-  flex-grow: 0; /* não vai crescer além do tamanho base */
-  flex-shrink: 0; /* não vai encolher se o container estiver pequeno */
-  flex-basis: 65%; /* ocupa 65% da largura do container */
+  flex: 2;
 }
 
 .wallpaperWrapper img {
@@ -27,9 +26,7 @@
 
 /* Coluna Info */
 .animeInfoContainer {
-  flex-grow: 0; /* não vai crescer além do tamanho base */
-  flex-shrink: 0; /* não vai encolher se o container estiver pequeno */
-  flex-basis: 35%; /* ocupa 65% da largura do container */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertical */
@@ -53,7 +50,7 @@
 }
 
 .btn {
-  background-color: aliceblue;
+  background-color: #c1c1c1;
   padding: 15px 30px;
   border-radius: 8px;
   border: none;
@@ -65,9 +62,51 @@
   gap: 10px;
 
   cursor: pointer;
+
+  transition: all ease-in 0.15s;
+}
+
+.btn:hover {
+  background-color: #3e3e3e;
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 /* Sinopse */
 .animeSynopsis {
   line-height: 1.6;
+  color: var(--text-color);
+}
+
+@media (max-width: 1024px) {
+  .featuredAnimeContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .animeInfoContainer {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .animeLogo {
+    width: 240px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .animeLogo {
+    width: 200px !important;
+  }
 }

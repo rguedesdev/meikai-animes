@@ -52,7 +52,7 @@
   border-radius: 50px;
 
   cursor: pointer;
-  transition: all ease-in 0.2s;
+  transition: all ease-in 0.15s;
 }
 
 .btnLearnMore:hover {
@@ -65,6 +65,7 @@
 }
 
 .devicesTitle {
+  color: var(--text-color);
   text-align: center;
   margin-bottom: 20px;
 }
