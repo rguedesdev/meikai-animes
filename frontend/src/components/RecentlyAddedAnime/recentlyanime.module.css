@@ -118,4 +118,17 @@
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .recentlyAddedAnimeTitleContainer {
+    justify-content: center;
+  }
+
+  .recentlyAddedAnimeTitle {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .btnSeeAll {
+    display: none;
+  }
 }

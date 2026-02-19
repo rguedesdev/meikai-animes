@@ -17,7 +17,7 @@ function RecentlyAddedOVA() {
         <button className={styles.btnSeeAll}>Ver Todos</button>
       </div>
       <hr className={styles.recentlyAddedOVAHr} />
-      <div className="grid grid-cols-5 gap-5">
+      <div className={styles.cardsGrid}>
         <article className={styles.recentlyAddedOVACard}>
           <Image
             className={styles.recentlyAddedOVAPicture}

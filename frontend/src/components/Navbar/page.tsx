@@ -26,7 +26,15 @@ function Navbar() {
   return (
     <header>
       <nav className={styles.navbar}>
-        <Image src={Banner} alt="Banner" width={1100} />
+        <Image
+          className={styles.banner}
+          src={Banner}
+          alt="Banner"
+          width={1020}
+          height={336}
+          unoptimized
+          priority
+        />
         {/* <BsMouse size={35} color="#ffffff" /> */}
         <ul className={styles.navList}>
           <li className={``}>

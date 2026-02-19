@@ -20,7 +20,7 @@ function Home() {
         <div role="status" className={styles.alert}>
           Ainda estamos fazendo algumas alterações no site e podem ocorrer
           alguns bugs durante a navegação. Prometo que não é nada que atrapalhe
-          na usabilidade ❤
+          na usabilidade.
         </div>
 
         {/* Animes em exibição */}

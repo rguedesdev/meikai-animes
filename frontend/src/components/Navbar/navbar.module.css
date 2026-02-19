@@ -6,6 +6,12 @@
   margin-bottom: 70px;
 }
 
+.banner {
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+}
+
 .navList {
   display: flex;
   flex-direction: row;
@@ -52,4 +58,17 @@
 
   /* mantém o tamanho mesmo sem borda visível */
   border: solid 0.5px transparent;
+}
+
+@media (max-width: 600px) {
+  .navList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navLink,
+  .navLinkActive {
+    width: 100%;
+    justify-content: center;
+  }
 }

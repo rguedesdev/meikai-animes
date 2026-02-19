@@ -17,7 +17,7 @@ function RecentlyAddedMovies() {
         <button className={styles.btnSeeAll}>Ver Todos</button>
       </div>
       <hr className={styles.recentlyAddedMoviesHr} />
-      <div className="grid grid-cols-5 gap-5">
+      <div className={styles.cardsGrid}>
         <article className={styles.recentlyAddedMoviesCard}>
           <Image
             className={styles.recentlyAddedMoviesPicture}

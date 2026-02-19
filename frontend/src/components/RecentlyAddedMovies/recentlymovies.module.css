@@ -1,16 +1,18 @@
+/* ===============================================
+   Recently Added Movies Section
+   Estrutura principal da seção de filmes recentes
+================================================== */
 .recentlyAddedMovies {
   display: flex;
   flex-direction: column;
-
   margin-bottom: 100px;
 }
 
+/* Header da seção (título + botão "Ver todos") */
 .recentlyAddedMoviesTitleContainer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 20px;
 }
 
@@ -20,12 +22,12 @@
   color: var(--text-color);
 }
 
+/* Botão secundário da seção */
 .btnSeeAll {
   color: var(--text-color);
   padding: 5px 20px;
   border: 1px solid #c1c1c1;
   border-radius: 7px;
-
   cursor: pointer;
   transition: all 0.15s ease-in;
 }
@@ -39,23 +41,40 @@
   transform: scale(0.97);
 }
 
+/* Linha decorativa com fade lateral para separar visualmente a seção */
 .recentlyAddedMoviesHr {
   border: none;
   height: 1px;
   width: 100%;
   background: linear-gradient(to right, transparent, #c1c1c1, transparent);
-
   margin-bottom: 30px;
 }
 
+/* ===============================================
+   Grid de Cards
+   5 colunas em desktop.
+   Redução progressiva via media queries para manter
+   tamanho mínimo legível dos posters.
+================================================== */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* ===============================================
+   Card de Filme
+   Mantém proporção padrão de poster (2:3).
+   Hover com leve escala para destaque visual.
+================================================== */
 .recentlyAddedMoviesCard {
-  width: 230px;
-  height: 350px;
+  width: 100%;
+  aspect-ratio: 2 / 3; /* Proporção comum de poster vertical */
+
   border-radius: 8px;
   overflow: hidden;
 
   position: relative;
-
   margin-bottom: 15px;
   cursor: pointer;
 
@@ -67,11 +86,16 @@
   transform: scale(1.1);
 }
 
-/* imagem ocupa TODO o card */
+/* A imagem ocupa todo o card mantendo corte proporcional */
 .recentlyAddedMoviesPicture {
   object-fit: cover;
 }
 
+/* ===============================================
+   Overlay inferior
+   Gradiente aplicado para melhorar legibilidade
+   do título sobre a imagem.
+================================================== */
 .MoviesOverlay {
   position: absolute;
   bottom: 0;
@@ -84,6 +108,7 @@
   color: var(--text-color);
 }
 
+/* Título com truncamento para evitar quebra de layout */
 .MoviesTitle {
   width: 100%;
   white-space: nowrap;
@@ -91,4 +116,40 @@
   text-overflow: ellipsis;
 
   font-weight: bold;
+}
+
+/* ===============================================
+   Responsividade
+   Redução progressiva de colunas para evitar
+   que os cards fiquem estreitos demais.
+================================================== */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recentlyAddedMoviesTitleContainer {
+    justify-content: center;
+  }
+
+  .recentlyAddedMoviesTitle {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .btnSeeAll {
+    display: none !important;
+  }
 }

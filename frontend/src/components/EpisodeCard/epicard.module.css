@@ -125,4 +125,17 @@
   .cardsGrid {
     grid-template-columns: 1fr;
   }
+
+  .animesAiringTitleContainer {
+    justify-content: center;
+  }
+
+  .animesAiringTitle {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .btnSeeAll {
+    display: none;
+  }
 }

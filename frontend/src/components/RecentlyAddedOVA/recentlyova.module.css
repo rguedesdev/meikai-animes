@@ -48,9 +48,16 @@
   margin-bottom: 30px;
 }
 
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
 .recentlyAddedOVACard {
-  width: 230px;
-  height: 350px;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+
   border-radius: 8px;
   overflow: hidden;
 
@@ -91,4 +98,37 @@
   text-overflow: ellipsis;
 
   font-weight: bold;
+}
+
+/* / Configurações de Responsividade / */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recentlyAddedOVATitleContainer {
+    justify-content: center;
+  }
+
+  .recentlyAddedOVATitle {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .btnSeeAll {
+    display: none;
+  }
 }
