@@ -67,7 +67,6 @@
 
   cursor: pointer;
   transition: all 0.15s ease-in;
-  margin-bottom: 15px;
 }
 
 .epiCard:hover {

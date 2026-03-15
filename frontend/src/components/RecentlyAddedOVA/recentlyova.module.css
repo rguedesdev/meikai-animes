@@ -71,7 +71,7 @@
 
 .recentlyAddedOVACard:hover {
   outline: 3px solid #ffffff;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 /* imagem ocupa TODO o card */

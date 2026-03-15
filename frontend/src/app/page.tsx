@@ -12,7 +12,7 @@ import { RecentlyAddedMovies } from "@/components/RecentlyAddedMovies/page";
 import { MeikaiPass } from "@/components/MeikaiPass/page";
 import { FeaturedAnime } from "@/components/FeaturedAnime/page";
 
-function Home() {
+function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.container}>
@@ -45,4 +45,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
