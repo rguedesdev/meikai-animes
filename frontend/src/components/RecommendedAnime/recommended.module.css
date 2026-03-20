@@ -1,11 +1,11 @@
-.animesAiring {
+.recommendedAnime {
   display: flex;
   flex-direction: column;
 
   margin-bottom: 50px;
 }
 
-.animesAiringTitleContainer {
+.recommendedAnimeTitleContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 }
 
-.animesAiringTitle {
+.recommendedAnimeTitle {
   font-size: 1.1em;
   font-weight: bold;
   color: var(--text-color);
@@ -22,9 +22,10 @@
 
 .btnSeeAll {
   color: var(--text-color);
+  padding: 5px 20px;
   border: 1px solid #c1c1c1;
   border-radius: 7px;
-  padding: 5px 20px;
+  white-space: nowrap;
 
   cursor: pointer;
   transition: all 0.15s ease-in;
@@ -39,11 +40,10 @@
   transform: scale(0.97);
 }
 
-.animesAiringHr {
+.recommendedAnimeHr {
   border: none;
   height: 1px;
   width: 100%;
-
   background: linear-gradient(to right, transparent, #c1c1c1, transparent);
 
   margin-bottom: 30px;
@@ -51,40 +51,36 @@
 
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
-.epiCard {
+.recommendedAnimeCard {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 3;
 
-  /* border: 1px solid #c1c1c1; */
-
-  position: relative;
   border-radius: 8px;
   overflow: hidden;
 
+  position: relative;
+
+  margin-bottom: 15px;
   cursor: pointer;
+
   transition: all 0.15s ease-in;
 }
 
-.epiCard:hover {
+.recommendedAnimeCard:hover {
   outline: 3px solid #ffffff;
   transform: scale(1.03);
 }
 
-.epiCard:active {
-  transform: scale(1);
-}
-
 /* imagem ocupa TODO o card */
-.epiBg {
+.recommendedAnimePicture {
   object-fit: cover;
 }
 
-/* texto sobreposto */
-.epiOverlay {
+.recommendedAnimeOverlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -94,16 +90,10 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 
   color: var(--text-color);
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
-.epiTitle {
-  flex: 1;
-  min-width: 0;
-
+.recommendedAnimeTitle {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -112,29 +102,30 @@
   font-weight: bold;
 }
 
-.epiText {
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+/* / Configurações de Responsividade / */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-/* / Configurações de Responsividade / */
-/* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .cardsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .cardsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .animesAiringTitleContainer {
+  .recentlyAddedOVATitleContainer {
     justify-content: center;
   }
 
-  .animesAiringTitle {
+  .recentlyAddedOVATitle {
     font-size: 1em;
     text-align: center;
   }

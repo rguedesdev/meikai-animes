@@ -6,6 +6,8 @@ import styles from "./anime.module.css";
 
 // Componetes
 import { AnimeHeader } from "@/components/AnimeHeader/page";
+import { DownloadSection } from "@/components/DownloadSection/page";
+import { RecommendedAnime } from "@/components/RecommendedAnime/page";
 
 function AnimePage() {
   return (
@@ -13,6 +15,9 @@ function AnimePage() {
       <main className={styles.animeContainer}>
         <AnimeHeader />
         <hr className={styles.hrFaded} />
+        <DownloadSection />
+
+        <RecommendedAnime />
       </main>
     </div>
   );
