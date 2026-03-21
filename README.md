@@ -1,4 +1,4 @@
-# Orkkut - Reimaginando o antigo Orkut
+# Meikai Animes - Reimaginado
 
 ![Docker](https://img.shields.io/badge/docker-066da5?style=for-the-badge&logo=docker&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)

@@ -56,15 +56,26 @@ function DownloadSection() {
               <BsDownload size={24} />
             </span>
 
-            <div className={styles.moreInfo}>
-              <span>
-                <TiArrowSortedUp size={22} />
-              </span>
-              <p>mais informações</p>
+            <div className={styles.moreInfoWrapper}>
+              <div className={styles.moreInfo}>
+                <span>
+                  <TiArrowSortedUp size={22} />
+                </span>
+                <p>mais informações</p>
+              </div>
+
+              <div className={styles.infoBox}>
+                <p>Episódios: 12</p>
+                <p>Ano: 2024</p>
+                <p>Fansub: Anime no Sekai</p>
+              </div>
             </div>
           </div>
 
-          <h2 className={styles.seasonTitle}>1ª Temporada</h2>
+          <h2 className={styles.seasonTitle}>
+            JoJo no Kimyou na Bouken Part 6 Stone Ocean
+          </h2>
+          <h3 className={styles.seasonNumber}>1ª Temporada</h3>
         </div>
       </div>
 

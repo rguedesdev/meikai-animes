@@ -4,6 +4,12 @@ import Image from "next/image";
 // Style Sheet CSS
 import styles from "./animeheader.module.css";
 
+// Icones
+import { LuAudioLines } from "react-icons/lu";
+
+import { PiSubtitles } from "react-icons/pi";
+import { PiSubtitlesBold } from "react-icons/pi";
+
 // Imagens
 import Frieren from "../../../public/sousou.jpg";
 
@@ -30,10 +36,22 @@ function AnimeHeader() {
           eles. No entanto, o tempo que Frieren passa com seus companheiros
           equivale a apenas uma fração de sua vida, que já dura mais de mil
           anos. Quando o grupo se desfaz após a vitória, Frieren retorna
-          naturalmente à sua rotina de coletar feitiços pelo continente. Quando
-          o grupo se desfaz após a vitória, Frieren retorna naturalmente à sua
-          rotina de coletar feitiços pelo continente.
+          naturalmente à sua rotina de coletar feitiços pelo continente.No
+          entanto, o tempo que Frieren passa com seus companheiros equivale a
+          apenas uma fração de.
         </p>
+        <div className={styles.audioInfo}>
+          <LuAudioLines className={styles.audioIcon} size={20} />
+          <span className={styles.audioText}>
+            Audio: Japonês | Português Brasileiro
+          </span>
+        </div>
+        <div className={styles.subtitleInfo}>
+          <PiSubtitles className={styles.subtitleIcon} size={20} />
+          <span className={styles.subtitleText}>
+            Legenda: Português Brasileiro
+          </span>
+        </div>
         <div className={styles.animeTags}>
           <span className={styles.animeTag}>Comédia</span>
           <span className={styles.animeTag}>Romance</span>

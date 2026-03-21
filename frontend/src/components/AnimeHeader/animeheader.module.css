@@ -7,7 +7,7 @@
 
 .animeImageWrapper {
   position: relative;
-  width: 200px;
+  width: 230px;
   height: auto;
   aspect-ratio: 2 / 3;
   flex-shrink: 0;
@@ -22,41 +22,68 @@
 }
 
 .animeInfo {
+  color: var(--text-color);
+
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .animeTitle {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .description {
+  margin-bottom: 20px;
+}
+
+.audioInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.subtitleInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .animeTags {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .animeTag {
-  color: #fff;
-  background-color: var(--primary-color);
+  font-size: 14px;
+  color: var(--text-color);
+  border: solid 2px var(--primary-color);
   border-radius: 20px;
   padding: 2px 10px;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.animeTag:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .animeStats {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  margin-top: 10px;
 }
 
 .statItem {
+  font-size: 14px;
   border: 1px solid #c1c1c1;
   border-radius: 8px;
   padding: 2px 10px;

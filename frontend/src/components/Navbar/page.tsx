@@ -15,6 +15,11 @@ import { FaQuestion } from "react-icons/fa";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { PiPencilCircle } from "react-icons/pi";
 
+import { BsTicketPerforated } from "react-icons/bs";
+
+import { TbRating18Plus } from "react-icons/tb";
+import { FaTeamspeak } from "react-icons/fa";
+
 import { BsMouse } from "react-icons/bs";
 
 // Imagens
@@ -90,6 +95,48 @@ function Navbar() {
             >
               <MdOutlinePeopleAlt size={20} />
               <span>Staff</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={
+                pathName === "/meikai-pass"
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }
+              href={`/meikai-pass`}
+            >
+              <BsTicketPerforated size={20} />
+              <span>Meikai Pass</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={
+                pathName === "/meikai-pass"
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }
+              href={`/meikai-pass`}
+            >
+              <TbRating18Plus size={20} />
+              <span>Hentai</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={
+                pathName === "/meikai-pass"
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }
+              href={`/meikai-pass`}
+            >
+              <FaTeamspeak size={20} />
+              <span>Suporte</span>
             </Link>
           </li>
         </ul>
