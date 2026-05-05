@@ -15,7 +15,7 @@ import { FeaturedAnime } from "@/components/FeaturedAnime/page";
 function HomePage() {
   return (
     <div className={styles.page}>
-      <main className={styles.container}>
+      <main className={styles.pageContainer}>
         {/* Alert Informativo */}
         <div role="status" className={styles.alert}>
           Ainda estamos fazendo algumas alterações no site e podem ocorrer

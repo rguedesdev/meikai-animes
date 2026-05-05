@@ -11,14 +11,16 @@ import styles from "./navbar.module.css";
 import { RiHome3Line } from "react-icons/ri";
 // import { FaPlay } from "react-icons/fa6";
 import { IoPlay } from "react-icons/io5";
-import { FaQuestion } from "react-icons/fa";
+import { RiBilibiliLine } from "react-icons/ri";
+import { FaQuestion, FaTeamspeak, FaRandom } from "react-icons/fa";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { PiPencilCircle } from "react-icons/pi";
 
 import { BsTicketPerforated } from "react-icons/bs";
 
 import { TbRating18Plus } from "react-icons/tb";
-import { FaTeamspeak } from "react-icons/fa";
+
+import { RiTranslate } from "react-icons/ri";
 
 import { BsMouse } from "react-icons/bs";
 
@@ -60,55 +62,8 @@ function Navbar() {
               }
               href={`/animes`}
             >
-              <IoPlay size={20} />
+              <RiBilibiliLine size={20} />
               <span>Animes</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={
-                pathName === "/pedidos" ? styles.navLinkActive : styles.navLink
-              }
-              href={`/pedidos`}
-            >
-              <PiPencilCircle size={20} />
-              <span>Pedidos</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={
-                pathName === "/faq" ? styles.navLinkActive : styles.navLink
-              }
-              href={`/faq`}
-            >
-              <FaQuestion size={15} />
-              <span>F.A.Q.</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={
-                pathName === "/staff" ? styles.navLinkActive : styles.navLink
-              }
-              href={`/staff`}
-            >
-              <MdOutlinePeopleAlt size={20} />
-              <span>Staff</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              className={
-                pathName === "/meikai-pass"
-                  ? styles.navLinkActive
-                  : styles.navLink
-              }
-              href={`/meikai-pass`}
-            >
-              <BsTicketPerforated size={20} />
-              <span>Meikai Pass</span>
             </Link>
           </li>
 
@@ -135,10 +90,88 @@ function Navbar() {
               }
               href={`/meikai-pass`}
             >
+              <RiTranslate size={20} />
+              <span>MeikaiSub</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={
+                pathName === "/pedidos" ? styles.navLinkActive : styles.navLink
+              }
+              href={`/pedidos`}
+            >
+              <PiPencilCircle size={20} />
+              <span>Pedidos</span>
+            </Link>
+          </li>
+
+          {/* <li>
+            <Link
+              className={
+                pathName === "/staff" ? styles.navLinkActive : styles.navLink
+              }
+              href={`/staff`}
+            >
+              <MdOutlinePeopleAlt size={20} />
+              <span>Staff</span>
+            </Link>
+          </li> */}
+
+          <li>
+            <Link
+              className={
+                pathName === "/meikai-pass"
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }
+              href={`/meikai-pass`}
+            >
+              <BsTicketPerforated size={20} />
+              <span>Meikai Pass</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={
+                pathName === "/faq" ? styles.navLinkActive : styles.navLink
+              }
+              href={`/faq`}
+            >
+              <FaQuestion size={15} />
+              <span>F.A.Q.</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={
+                pathName === "/meikai-pass"
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }
+              href={`/meikai-pass`}
+            >
               <FaTeamspeak size={20} />
               <span>Suporte</span>
             </Link>
           </li>
+
+          {/* <li>
+            <Link
+              className={
+                pathName === "/meikai-pass"
+                  ? styles.navLinkActive
+                  : styles.navLink
+              }
+              href={`/meikai-pass`}
+            >
+              <FaRandom size={20} />
+              <span>Random</span>
+            </Link>
+          </li> */}
         </ul>
       </nav>
     </header>

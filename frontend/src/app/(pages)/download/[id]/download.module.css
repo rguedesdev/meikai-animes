@@ -1,0 +1,149 @@
+.page {
+  min-height: 100vh;
+}
+
+.pageContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 16px;
+}
+
+.topAdvertising {
+  width: 100%;
+  border: dashed 1px #c1c1c1;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin: 20px 0;
+}
+
+.downloadCard {
+  min-width: 800px;
+  background-color: rgb(228, 117, 208);
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.imageWrapper {
+}
+
+.imageCover {
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.episodeTitle {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.btnsDownload {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btnMediafire,
+.btnMega {
+  color: var(--text-color);
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  min-width: 200px;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnMediafire {
+  background-color: #005bd1;
+}
+
+.btnMediafire:hover {
+  background-color: #0070f3;
+}
+
+.btnMega {
+  background-color: #b81f25;
+}
+
+.btnMega:hover {
+  background-color: #d9272e;
+}
+
+.centralAdvertising {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.centralAdItem {
+  border: dashed 1px #c1c1c1;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+.bottomAdvertising {
+  width: 100%;
+  border: dashed 1px #c1c1c1;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin: 20px 0;
+}
+
+.countdownWrapper {
+  margin: 15px 0;
+}
+
+.countdownText {
+  color: var(--text-color);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.readyText {
+  font-size: 14px;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Barra */
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: #c1c1c1;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  transition: width 1s linear;
+}
+
+/* Botões desabilitados */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

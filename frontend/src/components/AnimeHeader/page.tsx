@@ -10,8 +10,13 @@ import { LuAudioLines } from "react-icons/lu";
 import { PiSubtitles } from "react-icons/pi";
 import { PiSubtitlesBold } from "react-icons/pi";
 
+import { SiMyanimelist } from "react-icons/si";
+import { SiAnilist } from "react-icons/si";
+
 // Imagens
 import Frieren from "../../../public/sousou.jpg";
+import MAL from "../../../public/myanimelist.png";
+import AL from "../../../public/anilist.png";
 
 function AnimeHeader() {
   return (
@@ -41,13 +46,13 @@ function AnimeHeader() {
           apenas uma fração de.
         </p>
         <div className={styles.audioInfo}>
-          <LuAudioLines className={styles.audioIcon} size={20} />
+          <LuAudioLines className={styles.audioIcon} size={18} />
           <span className={styles.audioText}>
             Audio: Japonês | Português Brasileiro
           </span>
         </div>
         <div className={styles.subtitleInfo}>
-          <PiSubtitles className={styles.subtitleIcon} size={20} />
+          <PiSubtitles className={styles.subtitleIcon} size={18} />
           <span className={styles.subtitleText}>
             Legenda: Português Brasileiro
           </span>
@@ -58,8 +63,15 @@ function AnimeHeader() {
           <span className={styles.animeTag}>Fantasia</span>
         </div>
         <div className={styles.animeStats}>
-          <span className={styles.statItem}>MAL 7.6</span>
-          <span className={styles.statItem}>AL 8.6</span>
+          <div className={styles.statItem}>
+            <SiMyanimelist size={30} />
+            <span className={styles.statInfoText}>7.6</span>
+          </div>
+
+          <div className={styles.statItem}>
+            <SiAnilist size={16} />
+            <span className={styles.statInfoText}>8.6</span>
+          </div>
           <span className={styles.statItem}>2005</span>
           <span className={styles.statItem}>Em exibição</span>
         </div>

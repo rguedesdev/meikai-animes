@@ -17,6 +17,17 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaRegStar } from "react-icons/fa";
 import { PiCrownSimpleBold } from "react-icons/pi";
 
+import { BsFileEarmarkPlay } from "react-icons/bs";
+import { RiFileVideoLine } from "react-icons/ri";
+import { LiaFileVideo } from "react-icons/lia";
+import { RiFolderVideoLine } from "react-icons/ri";
+import { PiVideoBold } from "react-icons/pi";
+import { LuTvMinimalPlay } from "react-icons/lu";
+import { BsPlayBtn } from "react-icons/bs";
+import { RiBilibiliLine } from "react-icons/ri";
+
+import { MdOutlineCloudDownload } from "react-icons/md";
+
 // Imagens
 import downloadImage from "../../../public/enen_no_shoboutai.png";
 
@@ -77,9 +88,47 @@ function DownloadSection() {
           </h2>
           <h3 className={styles.seasonNumber}>1ª Temporada</h3>
         </div>
+
+        <div className={styles.item}>
+          <div className={styles.seasonCard} onClick={handleCardClick}>
+            <div className={styles.imageWrapper}>
+              <Image
+                src={downloadImage}
+                alt="Capa da 1ª temporada"
+                fill
+                className={styles.seasonImage}
+                unoptimized
+              />
+            </div>
+
+            <span className={styles.downloadIcon}>
+              <BsDownload size={24} />
+            </span>
+
+            <div className={styles.moreInfoWrapper}>
+              <div className={styles.moreInfo}>
+                <span>
+                  <TiArrowSortedUp size={22} />
+                </span>
+                <p>mais informações</p>
+              </div>
+
+              <div className={styles.infoBox}>
+                <p>Episódios: 26</p>
+                <p>Ano: 1998</p>
+                <p>Fansub: Animes Plus</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 className={styles.seasonTitle}>
+            JoJo no Kimyou na Bouken Part 6 Stone Ocean
+          </h2>
+          <h3 className={styles.seasonNumber}>2ª Temporada</h3>
+        </div>
       </div>
 
-      {showModal && (
+      {/* {showModal && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div
             className={styles.modalContent}
@@ -109,8 +158,7 @@ function DownloadSection() {
               </li>
               <li className={styles.modalBenefitHighlight}>
                 <PiCrownSimpleBold size={18} color="#FFD700" />
-                Crie listas personalizadas de Animes
-                <p></p>
+                <p>Crie listas personalizadas de Animes</p>
               </li>
               <li className={styles.modalBenefitHighlight}>
                 <PiCrownSimpleBold size={18} color="#FFD700" />
@@ -133,6 +181,71 @@ function DownloadSection() {
             <button className={styles.btnMeikaiPass}>
               Conhecer o Meikai Pass
             </button>
+          </div>
+        </div>
+      )} */}
+
+      {showModal && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className={styles.modalHeader}>
+              <h3>Lista de Episódios</h3>
+              <button className={styles.btnClose} onClick={closeModal}>
+                <IoMdCloseCircleOutline size={25} />
+              </button>
+            </div>
+
+            {/* <p className={styles.modalMessage}>
+              Somente os Animes em Exibição estão disponíveis para os usuários
+              FREE. Os demais animes (Completos, Filmes e OVAs) são exclusivos
+              para assinantes do Meikai Pass.
+            </p> */}
+
+            <h4 className={styles.modalBenefitsTitle}>1ª Temporada</h4>
+
+            <ul className={styles.modalEpisodesList}>
+              <li className={styles.modalEpisode}>
+                <div className={styles.modalEpisodeTitle}>
+                  <BsFileEarmarkPlay size={18} color="#FFD700" />
+                  <p>Episódio 01</p>
+                </div>
+                <div className={styles.modalDownloadOptions}>
+                  <Link href={`/download/13hh44h5hk3k3h5484n`} target="_BLANK">
+                    <div className={styles.btnDownload}>
+                      <MdOutlineCloudDownload size={20} />
+                      <p>Download</p>
+                    </div>
+                  </Link>
+                </div>
+              </li>
+
+              <li className={styles.modalBenefitHighlight}>
+                <LuTvMinimalPlay size={18} color="#FFD700" />
+                <p>Episódio 02</p>
+              </li>
+
+              <li className={styles.modalBenefitHighlight}>
+                <LuTvMinimalPlay size={18} color="#FFD700" />
+                <p>Episódio 03</p>
+              </li>
+
+              <li className={styles.modalBenefitHighlight}>
+                <LuTvMinimalPlay size={18} color="#FFD700" />
+                <p>Episódio 04</p>
+              </li>
+
+              <li className={styles.modalBenefitHighlight}>
+                <LuTvMinimalPlay size={18} color="#FFD700" />
+                <p>Episódio 05</p>
+              </li>
+            </ul>
+
+            {/* <button className={styles.btnMeikaiPass}>
+              Conhecer o Meikai Pass
+            </button> */}
           </div>
         </div>
       )}
