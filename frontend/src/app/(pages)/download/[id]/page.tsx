@@ -14,6 +14,10 @@ import { SiMega } from "react-icons/si";
 
 // Imagens
 import Frieren from "../../../../../public/sousou.jpg";
+import PikPak from "../../../../../public/pikpak-logo.png";
+import Blomp from "../../../../../public/blomp.png";
+import PCloud from "../../../../../public/pcloud.png";
+import TeraBox from "../../../../../public/terabox.png";
 
 function DownloadPage() {
   const [timeLeft, setTimeLeft] = useState(15);
@@ -55,6 +59,94 @@ function DownloadPage() {
               Sousou no Frieren - Episódio XXX
             </h2>
 
+            {/* <h3>Opções de Download</h3> */}
+
+            <div className={styles.btnsDownload}>
+              <a
+                className={`${!enabled ? styles.disabled : styles.btnMediafire}`}
+                href={enabled ? "https://mediafire.com/seu-link" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiMediafire size={30} />
+                <span>Mediafire</span>
+              </a>
+
+              <a
+                className={`${!enabled ? styles.disabled : styles.btnMega}`}
+                href={enabled ? "https://mega.io/seu-link" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiMega size={20} />
+                <span>Mega</span>
+              </a>
+
+              <a
+                className={`${!enabled ? styles.disabled : styles.btnPikPak}`}
+                href={enabled ? "https://mypikpak.com/seu-link" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={PikPak}
+                  alt="PikPak Logo"
+                  width={20}
+                  height={20}
+                  unoptimized
+                />
+                <span>PikPak</span>
+              </a>
+
+              <a
+                className={`${!enabled ? styles.disabled : styles.btnBlomp}`}
+                href={enabled ? "https://mypikpak.com/seu-link" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Blomp}
+                  alt="Blomp Logo"
+                  width={20}
+                  height={20}
+                  unoptimized
+                />
+                <span>Blomp</span>
+              </a>
+
+              <a
+                className={`${!enabled ? styles.disabled : styles.btnPCloud}`}
+                href={enabled ? "https://mypikpak.com/seu-link" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={PCloud}
+                  alt="pCloud Logo"
+                  width={28}
+                  height={28}
+                  unoptimized
+                />
+                <span>pCloud</span>
+              </a>
+
+              <a
+                className={`${!enabled ? styles.disabled : styles.btnTerabox}`}
+                href={enabled ? "https://mypikpak.com/seu-link" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={TeraBox}
+                  alt="Terabox Logo"
+                  width={28}
+                  height={28}
+                  unoptimized
+                />
+                <span>Terabox</span>
+              </a>
+            </div>
+
             <div className={styles.countdownWrapper}>
               {!enabled ? (
                 <>
@@ -71,42 +163,7 @@ function DownloadPage() {
                 </>
               ) : (
                 <></>
-                // <p className={styles.readyText}>Download liberado 🚀</p>
               )}
-            </div>
-
-            {/* <h3>Opções de Download</h3> */}
-
-            <div className={styles.btnsDownload}>
-              {/* <button className={styles.btnMediafire} disabled={!enabled}>
-                <SiMediafire size={30} />
-                <span>Mediafire</span>
-              </button> */}
-
-              <a
-                className={`${styles.btnMediafire} ${!enabled ? styles.disabled : ""}`}
-                href={enabled ? "https://mediafire.com/seu-link" : undefined}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SiMediafire size={30} />
-                <span>{enabled ? "Mediafire" : `Aguarde ${timeLeft}s`}</span>
-              </a>
-
-              <a
-                className={`${styles.btnMega} ${!enabled ? styles.disabled : ""}`}
-                href={enabled ? "https://mega.io/seu-link" : undefined}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SiMediafire size={30} />
-                <span>{enabled ? "Mega" : `Aguarde ${timeLeft}s`}</span>
-              </a>
-
-              {/* <button className={styles.btnMega} disabled={!enabled}>
-                <SiMega size={20} />
-                <span>Mega</span>
-              </button> */}
             </div>
           </div>
         </div>

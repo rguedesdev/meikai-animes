@@ -15,7 +15,7 @@
 ![AWS](https://img.shields.io/badge/AWS-141f2e?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
-Este é um projeto de redesign e modernização de um antigo site de download de animes, popupar na primeira década dos anos 2000, chamado **Meikai Animes**. Não é apenas um clone, é um revival de um dos maiores e mais populares sites de anime.
+Este é um projeto de redesign e modernização de um antigo site de download de animes, popular na primeira década dos anos 2000, chamado **Meikai Animes**. Não é apenas um clone, é um revival de um dos maiores e mais populares sites de anime.
 
 ## 🎯 Objetivo
 

@@ -14,14 +14,19 @@
   border: dashed 1px #c1c1c1;
   border-radius: 8px;
   padding: 20px 30px;
+
+  color: var(--text-color);
+
   margin: 20px 0;
 }
 
 .downloadCard {
-  min-width: 800px;
-  background-color: rgb(228, 117, 208);
-  padding: 20px;
+  width: 100%;
+  max-width: 1280px;
+  background-color: rgba(33, 33, 33, 0.6);
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
 
   display: flex;
   flex-direction: row;
@@ -30,15 +35,19 @@
 }
 
 .imageWrapper {
+  flex: 0 0 200px;
 }
 
 .imageCover {
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .episodeTitle {
+  color: var(--text-color);
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -48,12 +57,18 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btnMediafire,
-.btnMega {
+.btnMega,
+.btnPikPak,
+.btnBlomp,
+.btnPCloud,
+.btnTerabox {
   color: var(--text-color);
   font-size: 20px;
+  font-weight: 500;
   padding: 10px 20px;
   border-radius: 6px;
   min-width: 200px;
@@ -84,12 +99,62 @@
   background-color: #d9272e;
 }
 
+.btnPikPak {
+  background-color: #306eff;
+}
+
+.btnPikPak:hover {
+  background-color: #467efe;
+}
+
+.btnBlomp {
+  background-color: #9843d2;
+}
+
+.btnBlomp:hover {
+  background-color: #a457d7;
+}
+
+.btnPCloud {
+  background-color: #16bed0;
+}
+
+.btnPCloud:hover {
+  background-color: #49c4d2;
+}
+
+.btnTerabox {
+  background-color: #4c5afe;
+}
+
+.btnTerabox:hover {
+  background-color: #5c68e7;
+}
+
+/* Botões desabilitados */
+.disabled {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #c1c1c1;
+  padding: 10px 20px;
+  border-radius: 6px;
+  min-width: 200px;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  cursor: not-allowed;
+}
+
 .centralAdvertising {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   gap: 16px;
-
   margin-bottom: 20px;
 }
 
@@ -97,6 +162,8 @@
   border: dashed 1px #c1c1c1;
   padding: 20px 30px;
   border-radius: 8px;
+
+  color: var(--text-color);
 }
 
 .bottomAdvertising {
@@ -104,6 +171,9 @@
   border: dashed 1px #c1c1c1;
   border-radius: 8px;
   padding: 20px 30px;
+
+  color: var(--text-color);
+
   margin: 20px 0;
 }
 
@@ -126,7 +196,7 @@
 /* Barra */
 .progressBar {
   width: 100%;
-  height: 6px;
+  height: 10px;
   background: #c1c1c1;
   border-radius: 999px;
   overflow: hidden;
@@ -134,16 +204,6 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color),
-    var(--primary-color)
-  );
+  background: var(--primary-color);
   transition: width 1s linear;
-}
-
-/* Botões desabilitados */
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
